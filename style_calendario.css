@@ -1,0 +1,412 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Poppins:wght@300&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+body{
+    font-family: 'Poppins', 'sans-serif';
+    /*min-height: 400vh;*/
+    box-sizing: border-box;
+    background-color: #dadada;
+    text-align: center;
+}
+.header{
+    background-color: #5f965a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 0px 10%;
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.img-header{
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size:cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #ffff;
+    font-weight: 700;
+}
+.logo img {
+    height: 100px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantiene la proporción del logo */
+    margin-right: 15px; /* Espacio a la derecha del logo */
+}
+.navigation ul{
+    list-style: none;
+}
+.header .navigation ul li{
+    float: left;
+    position: relative;
+}
+.header .navigation ul li a{
+    font-size: 18px;
+    color: #ffff;
+    text-decoration: none;
+    padding: 20px ;
+    display: block;
+    transition: all .2s ease;
+}
+.header .navigation ul li a:hover{
+    background-color: #89b185; /*Color al pasar mouse por encima */
+}
+.header .navigation ul li ul{
+    position: absolute;
+    right: 0;
+    width: 300px;
+    background-color: rgba(1, 1, 1, 0.7);
+    display: none;
+}
+.header .navigation ul li ul li a{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+.header .navigation ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+.header .navigation ul li ul li{
+    width: 100%;
+}
+.header .navigation ul li:hover > ul{
+    display: initial;
+}
+#toggle,
+.header label{
+    display: none;
+}
+
+.menu{
+    width: 45px;
+    height: 35px;
+}
+
+@media(max-width:950px){
+    .header label{
+        display: initial;
+    }
+    .header{
+        padding: 20px 10%;
+    }
+    .header .navigation{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #61975a;
+        display: none;
+    }
+    .header .navigation ul li{
+        width: 100%;
+    }
+    .header .navigation ul li a{
+        padding: 8px 30px 8px 10%;
+    }
+    .header .navigation ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    .header .navigation ul li ul li{
+        background-color: rgba(1, 1, 1, 0.7);
+    }
+    .header .navigation ul li ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    #toggle:checked  ~ .navigation{
+        display: block;
+    }
+}
+
+.hero-content {
+    background-image: url(img/image-header2.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 35px;
+    text-align: center;
+    color:#fff;
+    padding-top: 100px; /* Incrementa el espacio superior */
+}
+
+.hero-content-icon {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1em;
+    max-width: 700px;
+    margin: 20px auto;
+}
+.btn-1 {
+    background-color: #000000; /* Verde */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 20px; /* Relleno interno */
+    text-align: center; /* Centrar texto */
+    text-decoration: none; /* Eliminar subrayado */
+    font-size: 16px; /* Tamaño de fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease; /* Transición para hover */
+}
+.btn-1:hover {
+    background-color: #5c5b5b; /* Verde más oscuro al pasar el cursor */
+}
+/*SUBTITULOS de historia, mision y vision*/
+.info-sections {
+    display: flex;
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
+    align-items: center; /* Alinear verticalmente */
+    width: 90%; /* Abarcar el 90% del ancho de la página */
+    margin: 20px auto; /* Centrar horizontalmente */
+    gap: 20px; /* Separación entre las cajas */
+}
+
+.subtitle-container {
+    display: flex;
+    justify-content: center; /* Centrar el texto horizontalmente */
+    align-items: center; /* Centrar el texto verticalmente */
+    width: 100%; /* Cada caja ocupa el 100% del contenedor */
+    height: 100px; /* Altura de las cajas */
+    background-color: #f5f5f5; /* Fondo gris claro */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+.subtitle {
+    font-size: 30px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    margin: 0; /* Eliminar márgenes predeterminados */
+    text-align: center; /* Centrar el texto */
+}
+/*Comienza la descripcion de historia, mision y vision*/
+
+.info-sections2 {
+    display: flex;
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
+    align-items: center; /* Alinear verticalmente */
+    width: 90%; /* Abarcar el 90% del ancho de la página */
+    margin: 20px auto; /* Centrar horizontalmente */
+    gap: 20px; /* Separación entre las cajas */
+}
+
+.subtitle-container2{
+    display: flex;
+    justify-content: center; /* Centrar el texto horizontalmente */
+    align-items: center; /* Centrar el texto verticalmente */
+    width: 100%; /* Cada caja ocupa el 100% del contenedor */
+    height: 700px; /* Altura de las cajas */
+    background-color: #f5f5f5; /* Fondo gris claro */
+    border-radius: 20px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+}
+
+.subtitle2 {
+    font-size: 30px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    color: #333; /* Color del texto */
+    margin: 0; /* Eliminar márgenes predeterminados */
+    text-align: center; /* Centrar el texto */
+}
+
+
+
+.footer {
+    position: relative;
+    width: 100%;
+    background-color: #5f965a;
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+  }
+  
+  .icon-elem {
+    list-style: none;
+  }
+  
+  .icon {
+    color: white;
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+  }
+  
+  .icon:hover {
+    transform: translateY(-10px);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .menu-elem {
+    list-style: none;
+  }
+  .menu-icon {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+  }
+  
+  .menu-icon:hover {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .info-box{
+    text-align: center;
+  }
+.image-container {
+    text-align: center; /* Centra la imagen horizontalmente */
+    margin: 2px 0; /* Agrega un margen arriba y abajo */
+}
+
+.image-container img {
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+}
+
+/* responssive*/
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+    .subtitle-container, .subtitle-container2 {
+        width: calc(50% - 20px); /* Dos columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .subtitle-container, .subtitle-container2 {
+        width: 100%; /* Una columna en pantallas pequeñas */
+    }
+
+    .info-sections, .info-sections2 {
+        flex-direction: column; /* Apila las cajas verticalmente */
+    }
+
+    .subtitle {
+        font-size: 24px; /* Reducir tamaño de texto */
+    }
+
+    .info-box {
+        text-align: justify; /* Justifica el texto */
+        font-size: 16px; /* Ajusta el tamaño del texto */
+        margin:50px;
+    }
+}
+
+/* Ajustar la imagen del centro */
+.image-container img {
+    max-width: 100%; /* La imagen no excede el ancho del contenedor */
+    height: auto; /* Mantener proporciones */
+    border-radius: 10px; /* Bordes redondeados (opcional) */
+    margin: 20px 0; /* Separar de otros elementos */
+}
+
+.hero-content h1 {
+    font-size: 5vw; /* Escala con el ancho de la ventana */
+    font-weight: bold; /* Mantiene el texto en negrita */
+    text-align: center; /* Centrar el texto */
+    margin: 20px auto; /* Espaciado uniforme */
+    line-height: 1.2; /* Ajusta el espaciado entre líneas */
+    color: #fff; /* Asegúrate de que el color sea visible sobre el fondo */
+    text-transform: uppercase; /* Mayúsculas para coherencia con el diseño */
+    margin-top: 20px; /* Espacio adicional solo encima del h1 */
+}
+
+/* Ajustes específicos para pantallas medianas */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 7vw; /* Aumenta ligeramente el tamaño en pantallas medianas */
+    }
+}
+
+/* Ajustes específicos para pantallas pequeñas */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 8vw; /* Aumenta más el tamaño en móviles pequeños */
+    }
+}
+.table-responsive {
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    -webkit-overflow-scrolling: touch; /* Mejora la experiencia en dispositivos táctiles */
+    margin: 20px 0; /* Espaciado arriba y abajo */
+}
+
+.table-responsive table {
+    width: 100%; /* Asegura que la tabla ocupe el espacio disponible */
+    border-collapse: collapse; /* Bordes colapsados para consistencia */
+}
+
+.table-responsive th,
+.table-responsive td {
+    text-align: center; /* Centra el texto en celdas */
+    padding: 10px; /* Añade espaciado interno */
+}
+
+@media (max-width: 768px) {
+    .table-responsive table {
+        font-size: 14px; /* Reduce el tamaño de fuente para pantallas pequeñas */
+    }
+
+    .table-responsive th,
+    .table-responsive td {
+        padding: 8px; /* Reduce el espaciado en pantallas pequeñas */
+    }
+}
+
+
